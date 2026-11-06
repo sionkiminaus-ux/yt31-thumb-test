@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>31화 썸네일 테스트</title>
+<style>
+:root{--bg:#f5f4f0;--panel:#fff;--ink:#181818;--sub:#646464;--line:#e3e1dc;--star:#c4161c;--chip:#fff1cc;--chip-ink:#7a4b00;--warn:#fbe9e7;--warn-ink:#9b2a1f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111;--panel:#1b1b1b;--ink:#ececec;--sub:#a0a0a0;--line:#2d2d2d;--star:#ff6b6b;--chip:#3a2f12;--chip-ink:#ffd36b;--warn:#3a1a17;--warn-ink:#ff9d94}}
+:root[data-theme="dark"]{--bg:#111;--panel:#1b1b1b;--ink:#ececec;--sub:#a0a0a0;--line:#2d2d2d;--star:#ff6b6b;--chip:#3a2f12;--chip-ink:#ffd36b;--warn:#3a1a17;--warn-ink:#ff9d94}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+.wrap{max-width:1400px;margin:0 auto;padding:28px 16px 64px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--sub);margin:0 0 20px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.cols{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card>a img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.02em;color:var(--sub)}
+.copy{font-size:20px;font-weight:900;line-height:1.3}
+.copy em{font-style:normal;color:var(--star)}
+.label{font-size:12px;font-weight:700;color:var(--sub);margin-bottom:2px}
+ol{margin:0;padding-left:20px}
+ol li{margin:4px 0}
+.best{font-weight:800}
+.best::before{content:"★ ";color:var(--star)}
+.ref{display:flex;gap:10px;align-items:center;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+.ref img{width:132px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;flex:none}
+.ref p{margin:0;font-size:13px;color:var(--sub)}
+.chip{display:inline-block;background:var(--chip);color:var(--chip-ink);font-weight:800;border-radius:999px;padding:0 8px;font-size:12px}
+.note{font-size:13px;background:var(--warn);color:var(--warn-ink);border-radius:8px;padding:8px 10px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:18px}
+.box h2{font-size:17px;margin:0 0 8px}
+.box ul{margin:0;padding-left:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>31화 썸네일·제목 A/B/C 테스트</h1>
+<p class="sub">상세페이지 GPT vs 아스트라 vs 클로드 오퍼스 비교 · 썸네일 3종 × 제목 3개 · ★ = 추천 조합 · 이미지 누르면 크게</p>
+
+<div class="cols">
+
+<div class="card">
+<a href="assets/a.jpg" target="_blank"><img src="assets/a.jpg" alt="A 썸네일: 상세페이지 GPT로 만들다가 여기로 갈아탑니다"></a>
+<div class="body">
+<span class="tag">A · 정답 숨김형</span>
+<div class="copy">상세페이지 GPT로 만들다가<br><em>여기로 갈아탑니다</em></div>
+<div><div class="label">제목 후보</div>
+<ol>
+<li class="best">상세페이지 아직 GPT로 만드세요? 같은 원본으로 3개 돌려보고 바로 갈아탔습니다</li>
+<li>상세페이지 아스트라가 최고라길래 써봤는데… 결국 다른 AI로 정착했습니다</li>
+<li>상세페이지 AI, GPT·아스트라·클로드 다 써보고 딱 하나만 남겼습니다</li>
+</ol></div>
+<div class="note">"갈아탔습니다·정착했습니다"는 영상에서 직접 한 말이 아님. 결론(오퍼스가 압도적)에서 끌어온 표현이라 용팀장 확인 필요</div>
+<div class="ref"><img src="assets/ref_a.jpg" alt="레퍼런스: AI 상세페이지 만들다 빡쳐서 여기로 갈아탔습니다"><p><span class="chip">11.2배</span> 돈벌자옹<br>"AI 상세페이지 만들다 빡쳐서 / 여기로 갈아탔습니다"</p></div>
+</div></div>
+
+<div class="card">
+<a href="assets/b.jpg" target="_blank"><img src="assets/b.jpg" alt="B 썸네일: 아직도 GPT로? 상세페이지 끝판왕 공개"></a>
+<div class="body">
+<span class="tag">B · 끝판왕 공개형 (클로드 공개)</span>
+<div class="copy">아직도 GPT로?<br><em>상세페이지 끝판왕 공개</em></div>
+<div><div class="label">제목 후보</div>
+<ol>
+<li class="best">상세페이지 아직도 GPT로 만드세요? 클로드 오퍼스가 압도적이었습니다</li>
+<li>상세페이지 끝판왕 공개, GPT·아스트라 다 제치고 클로드가 이겼습니다</li>
+<li>아스트라 vs 클로드 오퍼스, 같은 사진 넣고 붙여보니 상세페이지 차이가 이 정도입니다</li>
+</ol></div>
+<div class="note">썸네일의 제미나이 아이콘(X)은 영상에서 비교하지 않음. 빼거나 다른 아이콘으로 바꾸는 게 안전</div>
+<div class="ref"><img src="assets/ref_b.jpg" alt="레퍼런스: 포토샵 없이 상세페이지 가능?"><p><span class="chip">6.5배</span> 구대판다<br>"포토샵 없이 / 상세페이지 가능?"</p></div>
+</div></div>
+
+<div class="card">
+<a href="assets/c.jpg" target="_blank"><img src="assets/c.jpg" alt="C 썸네일: 중국어 원본만 넣으면 상세페이지 10분 완성"></a>
+<div class="body">
+<span class="tag">C · 원본 → 결과형</span>
+<div class="copy">중국어 원본만 넣으면<br><em>상세페이지 10분 완성</em></div>
+<div><div class="label">제목 후보</div>
+<ol>
+<li class="best">역대급입니다;; 중국어 원본만 넣었는데 상세페이지가 10분 만에 이렇게 나옵니다</li>
+<li>상세페이지 번역하고 고치느라 시간 쓰지 마세요, 원본만 넣으면 10분이면 됩니다</li>
+<li>중국어 상세페이지 그대로 넣고 10분, AI 3개 중 이게 제일 잘 만듭니다 (프롬프트 무료)</li>
+</ol></div>
+<div class="note">"역대급입니다;;"는 용팀장 채널에서 평소의 3.9배가 나온 상세페이지 회차 제목 말투</div>
+<div class="ref"><img src="assets/ref_c.jpg" alt="레퍼런스: 타오바오 PDF 넣으면 상세페이지 자동완성"><p><span class="chip">3.9배</span> 용팀장 자체 회차<br>"타오바오 PDF 넣으면 / 상세페이지 자동완성"</p></div>
+</div></div>
+
+</div>
+
+<div class="box">
+<h2>근거 · 기준</h2>
+<ul>
+<li>배수 = 그 영상 조회수 ÷ 그 채널 최근 롱폼 30개 조회수 중앙값 (2026-11-06 수집, 후보 164개 중 선정)</li>
+<li>제목·문구의 숫자와 주장은 영상(v9)에서 한 말만: 중국어 원본만 넣었는데 0:01 · 아스트라 대박이라는 영상 많다 0:12 · 같은 이미지로 비교 4:11 · 오퍼스가 압도적(본인 판단) 5:23 · 1개 10분 정도 5:50 · 프롬프트 무료 6:09</li>
+<li>용팀장 금지 표현(무조건·누구나·쉽습니다·자동으로 다·하루 만에 등) 0개. 레퍼런스의 "1분·빡쳐서·자동완성"은 쓰지 않음</li>
+<li>글자: 용팀장 썸네일 규격(Freesentation 9 Black + 검정 큰 그림자, esamanru 노랑→주황 그라데이션, 강원교육모두체 손글씨). 아이콘은 실제 ChatGPT·Claude·Gemini 로고</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
